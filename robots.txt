@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://founded-landing.vercel.app/sitemap.xml
+Sitemap: https://www.foundedapp.com/sitemap.xml
