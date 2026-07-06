@@ -299,6 +299,20 @@
   .colophon{margin-top:36px;padding-top:26px;border-top:1px solid var(--line-2);font-size:13px;color:var(--warm-gray);max-width:680px;line-height:1.7}
   .colophon .c-set{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--taupe)}
 
+  /* journal teaser */
+  .jrn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .jrn-card{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);transition:transform .25s ease,box-shadow .25s ease}
+  .jrn-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+  .jrn-card .jc-img{height:156px;background:#17120e center/cover no-repeat;position:relative}
+  .jrn-card .jc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.1),rgba(10,8,6,.36))}
+  .jrn-card .jc-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+  .jrn-card .jc-cat{font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay)}
+  .jrn-card h3{font-size:21px;margin-top:9px;line-height:1.12}
+  .jrn-card .jc-meta{margin-top:auto;padding-top:16px;font-family:var(--sans);font-size:12.5px;color:var(--warm-gray)}
+  .jrn-all{text-align:center;margin-top:36px}
+  .jrn-all a{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--clay)}
+  @media(max-width:760px){.jrn-grid{grid-template-columns:1fr}}
+
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
   @media(prefers-reduced-motion:reduce){
@@ -325,7 +339,7 @@
     <nav class="nav-links">
       <a class="link" href="#daily">Today</a>
       <a class="link" href="#library">The Library</a>
-      <a class="link" href="#practice">The Practice</a>
+      <a class="link" href="/blog">Journal</a>
       <a class="btn btn-clay" href="#begin">Try it free</a>
     </nav>
   </div>
@@ -584,6 +598,33 @@
   </div>
 </section>
 
+<!-- FROM THE JOURNAL -->
+<section class="jrn" id="journal" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="cairn" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="eyebrow clay">The Journal</span>
+      <h2 style="margin-top:14px">On faith and the work of <i>building.</i></h2>
+      <p class="sub">Field notes for the Christian founder — on calling, rest, money, leadership, and building something God's way.</p>
+    </div>
+    <div class="jrn-grid reveal">
+      <a class="jrn-card" href="/blog/work-as-worship">
+        <div class="jc-img" style="background-image:url(images/reading.jpg)"></div>
+        <div class="jc-body"><div class="jc-cat">Purpose</div><h3>Work as Worship: Finding God in the Daily Work of Building</h3><div class="jc-meta">June 2, 2026 · 4 min read</div></div>
+      </a>
+      <a class="jrn-card" href="/blog/overcoming-fear-as-a-christian-founder">
+        <div class="jc-img" style="background-image:url(images/fear.jpg)"></div>
+        <div class="jc-body"><div class="jc-cat">Fear &amp; Doubt</div><h3>Overcoming Fear and Doubt as a Christian Founder</h3><div class="jc-meta">May 5, 2026 · 4 min read</div></div>
+      </a>
+      <a class="jrn-card" href="/blog/what-is-a-faith-driven-entrepreneur">
+        <div class="jc-img" style="background-image:url(images/launching.jpg)"></div>
+        <div class="jc-body"><div class="jc-cat">Calling</div><h3>What Is a Faith-Driven Entrepreneur? A Definition for Founders</h3><div class="jc-meta">July 15, 2025 · 4 min read</div></div>
+      </a>
+    </div>
+    <p class="jrn-all reveal"><a href="/blog">Read the journal &rarr;</a></p>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
@@ -597,7 +638,7 @@
       <div class="foot-links">
         <a href="#daily">Today</a>
         <a href="#library">The Library</a>
-        <a href="#practice">The Practice</a>
+        <a href="/blog">Journal</a>
         <a href="#begin">Begin</a>
         <a href="#">Privacy</a>
       </div>
